@@ -1,0 +1,49 @@
+div .app {
+  background: #fff;
+  width: 600px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+div .input-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+div .send {
+  background: #fff;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  width: 100px;
+  height: 40px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.tel-input {
+  margin-left: 10px;
+  width: 200px;
+}
+
+button {
+  background: #01e675;
+  color: #ffffff;
+  font-weight: bold;
+  width: 200px;
+  height: 40px;
+  border: none;
+  line-height: 5px;
+  padding: 20px;
+  border-radius: 5px;
+  margin: 10px;
+}
