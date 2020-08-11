@@ -4,12 +4,12 @@ import "./style.css";
 export default class Main extends Component {
   state = {
     ddd: "",
-    telefone: "",
+    telephoneNumber: "",
   };
 
   sendMessage = () => {
     window.open(
-      `https://api.whatsapp.com/send?1=ptBR&phone=55${this.state.ddd}${this.state.telefone}`
+      `https://api.whatsapp.com/send?1=ptBR&phone=55${this.state.ddd}${this.state.telephoneNumber}`
     );
   };
 
@@ -20,12 +20,16 @@ export default class Main extends Component {
           <input
             className='ddd-input'
             placeholder='DDD'
+            maxLength='2'
             onInput={(d) => this.setState({ ddd: d.target.value })}
           ></input>
           <input
             className='tel-input'
             placeholder='Telefone'
-            onInput={(tel) => this.setState({ telefone: tel.target.value })}
+            maxLength='9'
+            onInput={(tel) =>
+              this.setState({ telephoneNumber: tel.target.value })
+            }
           ></input>
         </div>
         <br></br>
