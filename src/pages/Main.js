@@ -20,12 +20,14 @@ export default class Main extends Component {
   render() {
     return (
       <div className='app'>
+        <div className='logo'></div>
         <div className='input-area'>
           <input
             className='ddd-input'
             placeholder='DDD'
             maxLength='2'
             onInput={(d) => this.setState({ ddd: d.target.value })}
+            autoFocus
           ></input>
           <input
             className='tel-input'
@@ -38,7 +40,7 @@ export default class Main extends Component {
         </div>
         <br></br>
         <div className='send'>
-          <button onClick={this.sendMessage}>Enviar</button>
+          <button onClick={this.sendMessage}>Enviar Mensagem</button>
         </div>
       </div>
     );
