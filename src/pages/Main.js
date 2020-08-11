@@ -7,6 +7,10 @@ export default class Main extends Component {
     telephoneNumber: "",
   };
 
+  componentDidMount() {
+    document.title = "Easy Message";
+  }
+
   sendMessage = () => {
     window.open(
       `https://api.whatsapp.com/send?1=ptBR&phone=55${this.state.ddd}${this.state.telephoneNumber}`
