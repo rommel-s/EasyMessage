@@ -12,15 +12,30 @@ export default class Main extends Component {
   }
 
   sendMessage = () => {
-    window.open(
-      `https://api.whatsapp.com/send?1=ptBR&phone=55${this.state.ddd}${this.state.telephoneNumber}`
-    );
+    if (
+      this.state.ddd.length === 0 &&
+      this.state.telephoneNumber.length === 0
+    ) {
+      window.alert("nao tem numero");
+    } else {
+      window.open(
+        `https://api.whatsapp.com/send?1=ptBR&phone=55${this.state.ddd}${this.state.telephoneNumber}`
+      );
+    }
   };
 
   render() {
     return (
       <div className='app'>
-        <div className='logo'></div>
+        <div className='header'>
+          <div className='logo'></div>
+          <h1>Easy message</h1>
+          <p>
+            Mande mensagens no WhatsApp de maneira rápida sem precisar salvar o
+            número! <br></br>É preciso apenas que você esteja logado no WhatsApp
+            Web para continuar.
+          </p>
+        </div>
         <div className='input-area'>
           <input
             className='ddd-input'
