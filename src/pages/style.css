@@ -35,6 +35,8 @@ h1 {
 p {
   font-size: 14px;
   text-align: center;
+  margin-top: 50px;
+  margin-bottom: 25px;
 }
 
 div .input-area {
