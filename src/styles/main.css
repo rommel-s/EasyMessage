@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: #fafafa;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* HEADER CONFIGURATIONS */
+
+header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #fafafa;
+
+  margin-bottom: 30px;
+}
+
+.logo {
+  width: 5rem;
+  height: 5rem;
+  background-color: #c4c4c4;
+
+  margin-bottom: 20px;
+}
+
+.instructions {
+  margin: 2rem;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* USER INPUTS */
+
+section {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: "Open Sans", sans-serif;
+  background: #fafafa;
+}
+
+label {
+  position: relative;
+}
+
+label input {
+  font-family: "Open Sans", sans-serif;
+  font-style: 1rem;
+
+  color: #6e6d6d;
+  background: #fafafa;
+
+  margin: 0.625rem;
+  padding: 0.3rem 0.4rem;
+  min-width: 1rem;
+  height: 2.5rem;
+  width: 13rem;
+
+  border-radius: 0.2rem;
+  border: 1px solid #c5c5c5;
+  transition: border-color 0.2rem;
+}
+
+label input:focus {
+  border: 2px solid;
+  border-color: #18c200;
+}
+
+label input#ddd-number {
+  width: 4rem;
+}
+
+label p {
+  color: #6e6d6d;
+  font-size: 0.9rem;
+  user-select: none;
+
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  margin-left: 0.8rem;
+  padding: 0 0.4rem;
+
+  background: #fafafa;
+
+  transition: top 0.2s, font-size 0.2s, color 0.2s;
+}
+
+label input:focus + p,
+label input:not(:placeholder-shown) + p {
+  top: 20%;
+  color: #18c200;
+  font-size: 0.7rem;
+}
+
+label input:not(:focus) + p {
+  color: #c5c5c5;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+}
+
+.btn-container {
+  width: 100vw;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #fafafa;
+}
+
+.btn {
+  height: 2rem;
+  width: 18rem;
+  padding: 0.3rem;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.send-btn {
+  background-color: #18c200;
+  color: #fafafa;
+  font-family: "Open-Sans", sans-serif;
+}
+
+.reload-btn {
+  background-color: #fafafa;
+  color: #18c200;
+  text-decoration: underline;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  /* overflow: auto; */
+  background-color: rgb(0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 40vh auto;
+  padding: 20px;
+  border-radius: 5px;
+  width: 40vw;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  font-family: "Open Sans", sans-serif;
+}
+
+#modal-button {
+  width: 60%;
+  height: 2rem;
+  margin: 1rem 0 1rem 0;
+}
