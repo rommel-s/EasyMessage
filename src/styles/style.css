@@ -37,7 +37,7 @@ header {
 }
 
 #logo {
-  width: 40vw;
+  width: 20vw;
 }
 
 .instructions {
@@ -200,7 +200,7 @@ input[type="number"] {
   margin: 1rem 0 1rem 0;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   #logo {
     width: 40vw;
   }
